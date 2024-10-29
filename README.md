@@ -33,7 +33,7 @@ This Incident Response Playbook provides structured, actionable guidelines for r
 
     Clone the Repository: Download a local copy of the playbook for customization.
 
-    git clone https://github.com/your-username/incident-response-playbook.git
+    git clone https://github.com/tgkdre/incident-response-playbook.git
 
     Navigate Through the Folders: Each folder aligns with a specific phase of the incident response lifecycle.
     Apply the Templates: Follow the markdown templates provided in each folder to guide response actions.
