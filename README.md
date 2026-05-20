@@ -1,51 +1,81 @@
-# **Incident Response Playbook**
+# Incident Response Playbook
 
-## *Overview*
+![License](https://img.shields.io/badge/license-MIT-blue?style=flat)
+![Standard](https://img.shields.io/badge/standard-NIST%20CSF-informational?style=flat)
+![Tools](https://img.shields.io/badge/tools-Splunk%20%7C%20Okta-orange?style=flat)
 
-This Incident Response Playbook provides structured, actionable guidelines for responding to a wide range of cybersecurity incidents, from detection and containment to recovery and post-incident analysis. It follows industry standards, including the NIST Cybersecurity Framework, and integrates best-in-class tools, such as Okta for Identity and Access Management (IAM) and Splunk for Security Information and Event Management (SIEM).
+A structured, open-source incident response guide organized by the NIST Cybersecurity Framework response lifecycle. Covers detection through post-incident review for the most common enterprise threat classes, with integrated tooling references for Splunk (SIEM) and Okta (IAM).
+
+---
+
 ## Table of Contents
+
 - [Overview](#overview)
 - [Folder Structure](#folder-structure)
-- [Key Tools Used](#key-tools-used)
-- [How to Use This Playbook](#how-to-use-this-playbook)
+- [Key Tools](#key-tools)
+- [How to Use](#how-to-use)
 - [Getting Started](#getting-started)
+- [Author](#author)
 
-### Folder Structure
+---
 
-    Preparation: Guides for training, risk assessments, and establishing baselines.
-    Detection: Processes for identifying incidents using monitoring tools and threat intelligence.
-    Containment: Strategies to limit damage, including segmentation and account lockdowns.
-    Eradication: Procedures to remove malicious elements from systems and networks.
-    Recovery: Steps to restore normal operations and ensure no residual threats.
-    Legal and Compliance: Protocols for regulatory reporting and handling legal aspects.
-    Metrics and Reporting: Templates for tracking and reporting incident metrics.
-    Tools and Resources: References to key tools, checklists, and configurations.
-    Lessons Learned: Post-incident reviews for continuous improvement.
-    Threat Intelligence: Guidance on gathering, analyzing, and applying threat data.
-    Communication: Plans for notifying stakeholders and preserving incident information.
+## Overview
 
-### Key Tools Used
+This playbook provides actionable, phase-by-phase response procedures for cybersecurity incidents ranging from phishing and credential compromise to ransomware and insider threats. Each folder maps to a specific phase of the IR lifecycle and includes templates, checklists, and automation scripts designed to reduce mean time to respond (MTTR).
 
-    Okta (IAM): Used to enforce access control policies, monitor login activities, and quickly disable accounts as needed during incidents.
-    Splunk (SIEM): Facilitates centralized log management, threat detection, and alerts, ensuring rapid and informed response.
+The playbook follows the **NIST Cybersecurity Framework** and is structured to integrate with enterprise tooling out of the box.
 
-### How to Use This Playbook
+---
 
-    Clone the Repository: Download a local copy of the playbook for customization.
+## Folder Structure
 
-    git clone https://github.com/tgkdre/incident-response-playbook.git
+```
+incident-response-playbook/
+├── preparation/       Guides for training, risk assessments, and baseline configuration
+├── detection/         Processes for identifying incidents using monitoring tools and threat intel
+├── containment/       Strategies to limit damage: network segmentation, account lockdowns
+├── eradication/       Procedures to remove malicious elements from systems and networks
+├── recovery/          Steps to restore normal operations and verify no residual threats
+├── legal-compliance/  Protocols for regulatory reporting and legal obligations
+├── metrics-reporting/ Templates for tracking and reporting incident metrics
+├── tools-resources/   Key tool references, checklists, and configurations
+├── lessons-learned/   Post-incident review templates for continuous improvement
+├── threat-intel/      Guidance on gathering, analyzing, and applying threat data
+└── communication/     Stakeholder notification plans and evidence preservation protocols
+```
 
-    Navigate Through the Folders: Each folder aligns with a specific phase of the incident response lifecycle.
-    Apply the Templates: Follow the markdown templates provided in each folder to guide response actions.
-    Customize for Your Environment: Modify tools, contacts, and procedures to reflect your organization’s needs.
+---
 
-### Getting Started
+## Key Tools
 
-To get started with your first incident response, follow these steps:
+**Splunk (SIEM)** — Centralized log management, threat detection, and alerting. Used throughout the Detection and Metrics phases for correlation rules, dashboards, and rapid triage.
 
-    Review the Preparation folder to understand baseline requirements.
-    Use the Detection templates for monitoring and identifying potential incidents.
-    Follow the Containment and Eradication steps to manage active threats.
-    Refer to Recovery and Post-Incident sections to ensure a complete and thorough response.
+**Okta (IAM)** — Enforces access control policies, monitors login activity, and enables rapid account lockdown during active incidents. Integrated into the Containment phase.
 
-For questions or further support, please refer to the Tools and Resources section for contacts and references.
+---
+
+## How to Use
+
+```bash
+git clone https://github.com/TGKDre/incident-response-playbook.git
+```
+
+Navigate to the folder that matches your current response phase. Apply the markdown templates inside to guide your actions. Customize tool references, contact lists, and escalation paths to reflect your organization's environment before deploying.
+
+---
+
+## Getting Started
+
+For your first incident response run, start in `preparation/` to review baseline requirements and confirm tooling is in place. Move to `detection/` to identify the threat class, then follow `containment/` and `eradication/` to manage the active incident. Use `recovery/` and `lessons-learned/` to close out cleanly.
+
+For questions or tool-specific guidance, refer to the `tools-resources/` folder.
+
+---
+
+## Author
+
+**Andre Uzoukwu** — IAM & Cybersecurity Engineer
+
+- GitHub: [@TGKDre](https://github.com/TGKDre)
+- LinkedIn: [linkedin.com/in/andre-uzoukwu-tgkdre](https://www.linkedin.com/in/andre-uzoukwu-tgkdre/)
+- Email: andre.obiuzo@gmail.com
